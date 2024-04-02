@@ -1,0 +1,47 @@
+#include<Windows.h>
+#include<iostream>
+#pragma comment(lib, "winmm.lib")
+#include<string>
+using namespace std;
+
+void MonsterGen();
+
+
+
+int main() {
+	srand(time(NULL)); //randomizes seed based on computers clock
+	char direction;
+	int room = 1;	
+	
+	do { //GAME LOOP	
+		MonsterGen();
+		break;
+		
+	} while (direction != 'q');
+}
+
+
+
+
+
+//function definitions
+void MonsterGen() {
+	int num = rand() % 100; // creates a number from 0-99
+	if (num < 33) {//33% chance
+		cout << "Carp" << endl;
+	
+	}
+
+	else if (num < 66) {//33% chance
+		cout << "woodskip" << endl;
+		
+	}
+	else if (num < 77) {
+		cout << "Jeff" << endl;
+
+	}
+	else if (num < 100) {//33%
+		cout << "potato" << endl;
+		
+	}
+}

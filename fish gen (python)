@@ -1,0 +1,17 @@
+import random
+
+def fishing():
+    num = random.randrange(0,100)
+    if num < 33:
+        print("you caught a carp")
+        return "carp"
+    elif num < 66:
+        print ("woodskip")
+        return "woodskip"
+    elif num < 99:
+        print ("catfish")
+        return "catfish"
+    
+    
+fishing()
+#print (fishing(), "added to your inv")
